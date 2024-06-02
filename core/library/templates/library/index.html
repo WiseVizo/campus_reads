@@ -1,0 +1,231 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'library/index.css'%}">
+</head>
+<body>
+     <div class="header">
+        <div class="left-section">
+            <a href="index.html" class="home-button">Home</a>
+            <div class="title">Library</div>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search books...">
+        </div>
+        <div class="right-section">
+            <div class="user-circle">U</div>
+            <button class="logout-button">Logout</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="semester-card">
+                <h2 class="semester-title">Semester 1</h2>
+                <div class="books">
+                    <div class="book-card">
+                         <img src="{{MEDIA_URL}}img/placeholder_book.webp" alt="No Image Available">
+                        <div class="book-card-body">
+                            <h3 class="book-title">Book Title 1</h3>
+                            <p class="book-author">Author 1</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <img src="{{MEDIA_URL}}img/placeholder_book.webp" alt="No Image Available">
+                        <div class="book-card-body">
+                            <h3 class="book-title">Book Title 2</h3>
+                            <p class="book-author">Author 2</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <img src="{{MEDIA_URL}}img/placeholder_book.webp" alt="No Image Available">
+                        <div class="book-card-body">
+                            <h3 class="book-title">Book Title 3</h3>
+                            <p class="book-author">Author 3</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <img src="{{MEDIA_URL}}img/placeholder_book.webp" alt="No Image Available">
+                        <div class="book-card-body">
+                            <h3 class="book-title">Book Title 4</h3>
+                            <p class="book-author">Author 4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="semester-card">
+                <h2 class="semester-title">Semester 2</h2>
+                <div class="books">
+                    <div class="book-card">
+                        <img src="book5.jpg" alt="Book 5">
+                        <div class="book-card-body">
+                            <h3 class="book-title">Book Title 5</h3>
+                            <p class="book-author">Author 5</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <img src="book6.jpg" alt="Book 6">
+                        <div class="book-card-body">
+                            <h3 class="book-title">Book Title 6</h3>
+                            <p class="book-author">Author 6</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <img src="book7.jpg" alt="Book 7">
+                        <div class="book-card-body">
+                            <h3 class="book-title">Book Title 7</h3>
+                            <p class="book-author">Author 7</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <img src="book8.jpg" alt="Book 8">
+                        <div class="book-card-body">
+                            <h3 class="book-title">Book Title 8</h3>
+                            <p class="book-author">Author 8</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="semester-card">
+                <h2 class="semester-title">Semester 3</h2>
+                <div class="books">
+                    <div class="book-card">
+                        <img src="book9.jpg" alt="Book 9">
+                        <div class="book-card-body">
+                            <h3 class="book-title">Book Title 9</h3>
+                            <p class="book-author">Author 9</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <img src="book10.jpg" alt="Book 10">
+                        <div class="book-card-body">
+                            <h3 class="book-title">Book Title 10</h3>
+                            <p class="book-author">Author 10</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <img src="book11.jpg" alt="Book 11">
+                        <div class="book-card-body">
+                            <h3 class="book-title">Book Title 11</h3>
+                            <p class="book-author">Author 11</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <img src="book12.jpg" alt="Book 12">
+                        <div class="book-card-body">
+                            <h3 class="book-title">Book Title 12</h3>
+                            <p class="book-author">Author 12</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="row">
+            <div class="semester-card">
+                <h2 class="semester-title">Semester 4</h2>
+                <div class="books">
+                    <div class="book-card">
+                        <img src="book13.jpg" alt="Book 13">
+                        <div class="book-card-body">
+                            <h3 class="book-title">Book Title 13</h3>
+                            <p class="book-author">Author 13</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <img src="book14.jpg" alt="Book 14">
+                        <div class="book-card-body">
+                            <h3 class="book-title">Book Title 14</h3>
+                            <p class="book-author">Author 14</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <img src="book15.jpg" alt="Book 15">
+                        <div class="book-card-body">
+                            <h3 class="book-title">Book Title 15</h3>
+                            <p class="book-author">Author 15</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <img src="book16.jpg" alt="Book 16">
+                        <div class="book-card-body">
+                            <h3 class="book-title">Book Title 16</h3>
+                            <p class="book-author">Author 16</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="semester-card">
+                <h2 class="semester-title">Semester 5</h2>
+                <div class="books">
+                    <div class="book-card">
+                        <img src="book17.jpg" alt="Book 17">
+                        <div class="book-card-body">
+                            <h3 class="book-title">Book Title 17</h3>
+                            <p class="book-author">Author 17</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <img src="book18.jpg" alt="Book 18">
+                        <div class="book-card-body">
+                            <h3 class="book-title">Book Title 18</h3>
+                            <p class="book-author">Author 18</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <img src="book19.jpg" alt="Book 19">
+                        <div class="book-card-body">
+                            <h3 class="book-title">Book Title 19</h3>
+                            <p class="book-author">Author 19</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <img src="book20.jpg" alt="Book 20">
+                        <div class="book-card-body">
+                            <h3 class="book-title">Book Title 20</h3>
+                            <p class="book-author">Author 20</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="semester-card">
+                <h2 class="semester-title">Semester 6</h2>
+                <div class="books">
+                    <div class="book-card">
+                        <img src="book21.jpg" alt="Book 21">
+                        <div class="book-card-body">
+                            <h3 class="book-title">Book Title 21</h3>
+                            <p class="book-author">Author 21</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <img src="book22.jpg" alt="Book 22">
+                        <div class="book-card-body">
+                            <h3 class="book-title">Book Title 22</h3>
+                            <p class="book-author">Author 22</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <img src="book23.jpg" alt="Book 23">
+                        <div class="book-card-body">
+                            <h3 class="book-title">Book Title 23</h3>
+                            <p class="book-author">Author 23</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <img src="book24.jpg" alt="Book 24">
+                        <div class="book-card-body">
+                            <h3 class="book-title">Book Title 24</h3>
+                            <p class="book-author">Author 24</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+</body>
+</html>
