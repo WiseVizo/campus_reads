@@ -22,41 +22,27 @@
         </div>
     </div>
     <div class="container">
+        
         <div class="row">
+            {% for sem,books in books_by_sem_1to3.items %}
+            
             <div class="semester-card">
-                <h2 class="semester-title">Semester 1</h2>
+                <h2 class="semester-title">Semester {{sem}}</h2>
+                
                 <div class="books">
+                    {% for book in books %}
                     <div class="book-card">
-                         <img src="{{MEDIA_URL}}img/placeholder_book.webp" alt="No Image Available">
+                         <img src="{{book.image.url}}" alt="No Image Available">
                         <div class="book-card-body">
-                            <h3 class="book-title">Book Title 1</h3>
-                            <p class="book-author">Author 1</p>
+                            <h3 class="book-title">{{book.name}}</h3>
+                            <p class="book-quantity">{{book.quantity}}</p>
                         </div>
                     </div>
-                    <div class="book-card">
-                        <img src="{{MEDIA_URL}}img/placeholder_book.webp" alt="No Image Available">
-                        <div class="book-card-body">
-                            <h3 class="book-title">Book Title 2</h3>
-                            <p class="book-author">Author 2</p>
-                        </div>
-                    </div>
-                    <div class="book-card">
-                        <img src="{{MEDIA_URL}}img/placeholder_book.webp" alt="No Image Available">
-                        <div class="book-card-body">
-                            <h3 class="book-title">Book Title 3</h3>
-                            <p class="book-author">Author 3</p>
-                        </div>
-                    </div>
-                    <div class="book-card">
-                        <img src="{{MEDIA_URL}}img/placeholder_book.webp" alt="No Image Available">
-                        <div class="book-card-body">
-                            <h3 class="book-title">Book Title 4</h3>
-                            <p class="book-author">Author 4</p>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
+                
             </div>
-            <div class="semester-card">
+            <!-- <div class="semester-card">
                 <h2 class="semester-title">Semester 2</h2>
                 <div class="books">
                     <div class="book-card">
@@ -88,8 +74,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="semester-card">
+            </div> -->
+            <!-- <div class="semester-card">
                 <h2 class="semester-title">Semester 3</h2>
                 <div class="books">
                     <div class="book-card">
@@ -121,7 +107,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
+            {% endfor %}
         </div>
 
         <!-- <div class="row">
