@@ -1,0 +1,10 @@
+<div class="register-container">
+    <div class="register-header">Login</div>
+    <div class="register-body">
+        <form method="post">
+            {%csrf_token%}
+            {{form}}
+            <button type="submit" >Login</button>
+        </form>
+    </div>
+</div>
