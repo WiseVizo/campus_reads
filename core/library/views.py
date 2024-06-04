@@ -30,8 +30,8 @@ def home_page(request):
     }
     return render(request, "library/index.html", context=context)
 
-def books_by_sem(request):
-    books = Book.objects.filter(semester=1)
+def books_by_sem(request, sem):
+    books = Book.objects.filter(semester=sem)
     context={
         "books": books
     }

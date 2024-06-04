@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'order',
     'students',
     'library',
     "django.contrib.admin",
@@ -130,3 +131,10 @@ AUTH_USER_MODEL = 'students.CustomUser'
 
 LOGIN_REDIRECT_URL = 'library:home_page'
 LOGIN_URL = 'students:login'
+
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER = "bca592016@gmail.com"
+EMAIL_HOST_PASSWORD = "uszt negf gzos wlws"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"

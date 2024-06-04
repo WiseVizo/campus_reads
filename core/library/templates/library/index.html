@@ -12,13 +12,23 @@
         <div class="left-section">
             <a href="{% url 'library:home_page' %}" class="home-button">Home</a>
         </div>
-        <div class="search-bar">
+        <!-- <div class="search-bar">
             <input type="text" placeholder="Search books...">
-        </div>
-        <form class="right-section" action="{% url 'students:logout' %}" method="post">
+        </div> -->
+        <div class="right-section">
+        <a href="{% url 'order:cart' %}" class="logout-button">Cart</a>
+        {% if user.is_authenticated %}
+        <form  action="{% url 'students:logout' %}" method="post">
                 {% csrf_token %}
                 <button type="submit" class="logout-button" >Logout</button>
         </form>
+        {% else %}
+        <form  action="{% url 'students:login' %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="logout-button" >Login</button>
+        </form>
+        {% endif %}
+        </div>
     </div>
     <div class="introduction">
         <h1>Welcome to Our Library</h1>
@@ -32,6 +42,7 @@
         <div class="row">
             {% for sem, books in books_by_sem_1to3.items %}
             <div class="semester-card">
+                <a href="{% url 'library:books_details' sem %}" class="semester-card-link">
                 <h2 class="semester-title">Semester {{sem}}</h2>
                 <div class="books">
                     {% for book in books %}
@@ -44,6 +55,7 @@
                     </div>
                     {% endfor %}
                 </div>
+                </a>
             </div>
             {% endfor %}
         </div>
@@ -66,109 +78,6 @@
             </div>
             {% endfor %}
         </div>
-
-        <!-- <div class="row">
-            <div class="semester-card">
-                <h2 class="semester-title">Semester 4</h2>
-                <div class="books">
-                    <div class="book-card">
-                        <img src="book13.jpg" alt="Book 13">
-                        <div class="book-card-body">
-                            <h3 class="book-title">Book Title 13</h3>
-                            <p class="book-author">Author 13</p>
-                        </div>
-                    </div>
-                    <div class="book-card">
-                        <img src="book14.jpg" alt="Book 14">
-                        <div class="book-card-body">
-                            <h3 class="book-title">Book Title 14</h3>
-                            <p class="book-author">Author 14</p>
-                        </div>
-                    </div>
-                    <div class="book-card">
-                        <img src="book15.jpg" alt="Book 15">
-                        <div class="book-card-body">
-                            <h3 class="book-title">Book Title 15</h3>
-                            <p class="book-author">Author 15</p>
-                        </div>
-                    </div>
-                    <div class="book-card">
-                        <img src="book16.jpg" alt="Book 16">
-                        <div class="book-card-body">
-                            <h3 class="book-title">Book Title 16</h3>
-                            <p class="book-author">Author 16</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="semester-card">
-                <h2 class="semester-title">Semester 5</h2>
-                <div class="books">
-                    <div class="book-card">
-                        <img src="book17.jpg" alt="Book 17">
-                        <div class="book-card-body">
-                            <h3 class="book-title">Book Title 17</h3>
-                            <p class="book-author">Author 17</p>
-                        </div>
-                    </div>
-                    <div class="book-card">
-                        <img src="book18.jpg" alt="Book 18">
-                        <div class="book-card-body">
-                            <h3 class="book-title">Book Title 18</h3>
-                            <p class="book-author">Author 18</p>
-                        </div>
-                    </div>
-                    <div class="book-card">
-                        <img src="book19.jpg" alt="Book 19">
-                        <div class="book-card-body">
-                            <h3 class="book-title">Book Title 19</h3>
-                            <p class="book-author">Author 19</p>
-                        </div>
-                    </div>
-                    <div class="book-card">
-                        <img src="book20.jpg" alt="Book 20">
-                        <div class="book-card-body">
-                            <h3 class="book-title">Book Title 20</h3>
-                            <p class="book-author">Author 20</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="semester-card">
-                <h2 class="semester-title">Semester 6</h2>
-                <div class="books">
-                    <div class="book-card">
-                        <img src="book21.jpg" alt="Book 21">
-                        <div class="book-card-body">
-                            <h3 class="book-title">Book Title 21</h3>
-                            <p class="book-author">Author 21</p>
-                        </div>
-                    </div>
-                    <div class="book-card">
-                        <img src="book22.jpg" alt="Book 22">
-                        <div class="book-card-body">
-                            <h3 class="book-title">Book Title 22</h3>
-                            <p class="book-author">Author 22</p>
-                        </div>
-                    </div>
-                    <div class="book-card">
-                        <img src="book23.jpg" alt="Book 23">
-                        <div class="book-card-body">
-                            <h3 class="book-title">Book Title 23</h3>
-                            <p class="book-author">Author 23</p>
-                        </div>
-                    </div>
-                    <div class="book-card">
-                        <img src="book24.jpg" alt="Book 24">
-                        <div class="book-card-body">
-                            <h3 class="book-title">Book Title 24</h3>
-                            <p class="book-author">Author 24</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
     </div>
 </body>
 </html>
