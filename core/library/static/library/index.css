@@ -71,6 +71,26 @@ body {
     margin-left: 10px;
     margin-right: 10px;
 }
+
+.introduction {
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #cde8ff;
+    border-radius: 10px;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+.introduction h1 {
+    font-size: 24px;
+    color: #333;
+}
+.introduction p {
+    font-size: 16px;
+    color: #666;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -133,8 +153,17 @@ body {
 @media (max-width: 576px) {
     .semester-card {
         width: 100%;
+        margin-top: 20px;
     }
     .book-card {
         width: 100%;
+        margin-bottom: 20px;
     }
+    /* .semester-card {
+        transition: none;
+    } */
+    .semester-card:hover {
+        transform: none;
+    }
+    
 }

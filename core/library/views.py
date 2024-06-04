@@ -28,7 +28,7 @@ def home_page(request):
         'books_by_sem_1to3': books_by_semester_half,
         'books_by_sem_4to6': books_by_semester,
     }
-    return render(request, "library/index1.html", context=context)
+    return render(request, "library/index.html", context=context)
 
 def books_by_sem(request):
     books = Book.objects.filter(semester=1)
